@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 
 .main-image {
@@ -68,3 +69,41 @@ h2{
         font-size: 42px;
     }
 }
+
+.dark-theme {
+    background-color: rgb(36, 35, 35);
+}
+
+.dark-theme .card {
+    background-color: rgb(53, 50, 50);
+}
+
+.dark-theme p, .dark-theme h5 {
+    color: white;
+}
+
+* {
+    transition: background-color 0.8s ease, color 1s ease;
+}
+
+.card {
+    transition: background-color 0.8s ease, color 1s ease;
+}
+
+.dark-theme .helper-text {
+    color: white;
+}
+
+.dark-theme input, .dark-theme textarea {
+    color: rgb(240, 152, 152);
+}
+
+.dark-theme .modal {
+    color: rgb(250, 219, 224);
+    background-color: rgb(48, 46, 46);
+}
+
+.dark-theme .modal-footer {
+    background-color: rgb(48, 46, 46);
+
+} 

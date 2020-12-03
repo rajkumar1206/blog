@@ -12,15 +12,60 @@
             
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Niconne&family=Piedra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Niconne&family=Piedra&display=swap" rel="stylesheet">
+    
+    <script src="./scripts/index.js" type="module" defer></script>
     <title>Rajkumar Blog</title>
 </head>
-<body>
+<body class="light-theme">
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <br>
+      <h4>Welcome to Rajkumar's Blog...</h4>
+      <span>Thank you for visiting my Blog... Please enter your name to continue...</span>
+      <br>
+      <br>
+      <div class="input-field">
+        <input id="name" type="text" class="validate sendNameForm">
+        <label for="name">Name</label>
+        <span class="helper-text" data-error="please enter valid credential"></span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="modal-close waves-effect waves-green btn-flat red-text">close</a>
+      <a href="#" class="modal-close waves-effect waves-green btn-flat green-text sendName">continue</a>
+    </div>
+  </div>
+
+
     <div class="main-image">
         <div class="heading">
-            <span>Developer Blog</span>
+            <span>Rajkumar's Blog</span>
         </div>
     </div>
+
+    <br>
+    <br>
+
+    <div class="container center">
+      <div class="card z-index-5">
+        <div class="card-content">
+          <h5>Try our new feature of Dark Theme. Hope you will like it.</h5>
+          <div class="switch">
+            <label>
+              Light Theme
+              <input type="checkbox">
+              <span class="lever"></span>
+              Dark Theme
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
 
     <div class="container">
         <div class="row padding-row">
@@ -40,7 +85,7 @@
     <hr>
 
     <div class="container">
-        <h2>Projects Done</h2>
+        <h2>My Projects</h2>
         <div class="row">
             <div class="col s12 m6 l4">
               <div class="card">
@@ -156,7 +201,53 @@
           </div>
     </div>
 
-    
+    <hr>
+
+    <br>
+    <br>
+
+    <div class="container">
+      <div class="card">
+        <br>
+        <h2 class="center">Get in Touch...</h2>
+        <br>
+        <div class="container">
+          <form>
+              <div class="input-field">
+                <input id="name" type="text" class="validate" name="name">
+                <label for="name">Name</label>
+                <span class="helper-text" data-error="please enter valid credential"></span>
+              </div>
+              <div class="input-field">
+                <input id="email" type="email" class="validate" name="email">
+                <label for="email">Email</label>
+                <span class="helper-text" data-error="please enter the vaild email"></span>
+              </div>
+              <div class="input-field">
+                <input id="sub" type="text" class="validate" name="subject">
+                <label for="sub">Subject</label>
+                <span class="helper-text" data-error="Enter the valid credential">Enter the subject of your message</span>
+              </div>
+              <div class="input-field">
+                <textarea id="textarea1" class="materialize-textarea" name="text"></textarea>
+                <label for="textarea1">Message</label>
+              </div>
+
+              <div class="center">
+                <button class="btn waves-effect waves-light btn-large center" type="submit" name="action">Submit
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+              <br>
+              <br>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
     
 
     <footer class="page-footer">
