@@ -79,7 +79,7 @@ h2{
 }
 
 .dark-theme p, .dark-theme h5 {
-    color: white;
+    color: rgb(233, 169, 169);
 }
 
 * {
