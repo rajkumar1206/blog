@@ -12,8 +12,9 @@ function loadjs () {
             body.classList.remove('light-theme');
             localStorage.setItem('theme', 'dark-theme');
         }
+    } else {
+        localStorage.setItem('theme', 'light-theme');
     }
-    // localStorage.setItem('theme', 'light-theme');
     
     // console.log(switchTheme);
     
