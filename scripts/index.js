@@ -67,7 +67,6 @@ sendName.addEventListener('click', async (e) => {
 });
 
 const form = document.querySelector('form');
-
 form.addEventListener('submit', async (e)=> {
     e.preventDefault();
     spinnerHandler.style.display = "block";
@@ -89,10 +88,12 @@ form.addEventListener('submit', async (e)=> {
     form.email.value="";
     form.subject.value="";
     form.text.value="";
-    form.name.click();
-    form.email.click();
-    form.subject.click();
-    form.text.click();
-    form.click();
+
+
+    
+    const labels = document.querySelectorAll('form label');
+    labels.forEach(lab => {
+        lab.classList.remove('active');
+    })
     spinnerHandler.style.display = "none";
 })
