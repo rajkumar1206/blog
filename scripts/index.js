@@ -89,5 +89,10 @@ form.addEventListener('submit', async (e)=> {
     form.email.value="";
     form.subject.value="";
     form.text.value="";
+    form.name.click();
+    form.email.click();
+    form.subject.click();
+    form.text.click();
+    form.click();
     spinnerHandler.style.display = "none";
 })
