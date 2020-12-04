@@ -70,30 +70,38 @@ const form = document.querySelector('form');
 form.addEventListener('submit', async (e)=> {
     e.preventDefault();
     spinnerHandler.style.display = "block";
-    const obj = {name: form.name.value, email: form.email.value, subject: form.subject.value, text: form.text.value};
-    console.log(obj);
 
-    const res = await fetch(url+"blog/add/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-          }, 
-        body: JSON.stringify(obj)
-    });
+    try {
+        const obj = {name: form.name.value, email: form.email.value, subject: form.subject.value, text: form.text.value};
+        console.log(obj);
 
-    const resData = await res.json();
+        const res = await fetch(url+"blog/add/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            }, 
+            body: JSON.stringify(obj)
+        });
 
-    console.log(resData);
-    form.name.value="";
-    form.email.value="";
-    form.subject.value="";
-    form.text.value="";
+        const resData = await res.json();
 
+        console.log(resData);
 
+        if(res.status>=400) {
+            alert("Something went wrong...Please try again...");
+            return;
+        }
+        form.name.value="";
+        form.email.value="";
+        form.subject.value="";
+        form.text.value="";
+        const labels = document.querySelectorAll('form label');
+        labels.forEach(lab => {
+            lab.classList.remove('active');
+        });
+    } catch(err) {
+        alert("Something went wrong...Please try again...");
+    }
     
-    const labels = document.querySelectorAll('form label');
-    labels.forEach(lab => {
-        lab.classList.remove('active');
-    })
     spinnerHandler.style.display = "none";
 })
