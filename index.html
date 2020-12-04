@@ -19,6 +19,8 @@
 </head>
 <body class="light-theme">
 
+  <div class="spinner"><div class="lds-hourglass"></div></div>
+
   <div id="modal1" class="modal">
     <div class="modal-content">
       <br>
@@ -27,7 +29,7 @@
       <br>
       <br>
       <div class="input-field">
-        <input id="name" type="text" class="validate sendNameForm">
+        <input id="name" type="text" class="validate sendNameForm" autocomplete="off">
         <label for="name">Name</label>
         <span class="helper-text" data-error="please enter valid credential"></span>
       </div>
@@ -214,21 +216,21 @@
         <div class="container">
           <form>
               <div class="input-field">
-                <input id="nam" type="text" class="validate" name="name">
+                <input id="nam" type="text" class="validate" name="name" autocomplete="off">
                 <label for="nam">Name</label>
               </div>
               <div class="input-field">
-                <input id="email" type="email" class="validate" name="email">
+                <input id="email" type="email" class="validate" name="email"  autocomplete="off">
                 <label for="email">Email</label>
                 <span class="helper-text" data-error="please enter the vaild email"></span>
               </div>
               <div class="input-field">
-                <input id="sub" type="text" class="validate" name="subject">
+                <input id="sub" type="text" class="validate" name="subject" autocomplete="off">
                 <label for="sub">Subject</label>
                 <span class="helper-text" data-error="Enter the valid credential">Enter the subject of your message</span>
               </div>
               <div class="input-field">
-                <textarea id="textarea1" class="materialize-textarea" name="text"></textarea>
+                <textarea id="textarea1" class="materialize-textarea" name="text" autocomplete="off"></textarea>
                 <label for="textarea1">Message</label>
               </div>
 

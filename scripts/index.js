@@ -45,6 +45,7 @@ const sendName = document.querySelector('.sendName');
 
 sendName.addEventListener('click', async (e) => {
     e.preventDefault();
+    spinnerHandler.style.display = "block";
     const name = document.querySelector('.sendNameForm');
     console.log(name.value);
 
@@ -59,6 +60,8 @@ sendName.addEventListener('click', async (e) => {
     const resData = await res.json();
 
     console.log(resData);
+    name.value="";
+    spinnerHandler.style.display = "none";
 
 });
 
@@ -66,6 +69,7 @@ const form = document.querySelector('form');
 
 form.addEventListener('submit', async (e)=> {
     e.preventDefault();
+    spinnerHandler.style.display = "block";
     const obj = {name: form.name.value, email: form.email.value, subject: form.subject.value, text: form.text.value};
     console.log(obj);
 
@@ -84,4 +88,5 @@ form.addEventListener('submit', async (e)=> {
     form.email.value="";
     form.subject.value="";
     form.text.value="";
+    spinnerHandler.style.display = "none";
 })
