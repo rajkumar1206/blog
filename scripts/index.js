@@ -89,6 +89,7 @@ form.addEventListener('submit', async (e)=> {
 
         if(res.status>=400) {
             alert("Something went wrong...Please try again...");
+            spinnerHandler.style.display = "none";
             return;
         }
         form.name.value="";
@@ -120,6 +121,7 @@ form.addEventListener('submit', async (e)=> {
 
     } catch(err) {
         alert("Something went wrong...Please try again...");
+        spinnerHandler.style.display = "none";
     }
     
     spinnerHandler.style.display = "none";
