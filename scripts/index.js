@@ -39,17 +39,49 @@ function loadjs () {
     
 }
 
+const url="http://127.0.0.1:8000/";
+
 const sendName = document.querySelector('.sendName');
 
-sendName.addEventListener('click', (e) => {
+sendName.addEventListener('click', async (e) => {
+    e.preventDefault();
     const name = document.querySelector('.sendNameForm');
     console.log(name.value);
+
+    const res = await fetch(url+"blog/visit/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+          }, 
+        body: JSON.stringify({name: name.value})
+    });
+
+    const resData = await res.json();
+
+    console.log(resData);
+
 });
 
 const form = document.querySelector('form');
 
-form.addEventListener('submit', (e)=> {
+form.addEventListener('submit', async (e)=> {
     e.preventDefault();
     const obj = {name: form.name.value, email: form.email.value, subject: form.subject.value, text: form.text.value};
     console.log(obj);
+
+    const res = await fetch(url+"blog/add/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+          }, 
+        body: JSON.stringify(obj)
+    });
+
+    const resData = await res.json();
+
+    console.log(resData);
+    form.name.value="";
+    form.email.value="";
+    form.subject.value="";
+    form.text.value="";
 })
