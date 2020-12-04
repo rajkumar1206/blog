@@ -101,6 +101,8 @@ form.addEventListener('submit', async (e)=> {
         });
 
         const modeltxt = document.querySelector('.modal-content');
+        const modelfoot = document.querySelector('.modal-footer');
+        modelfoot.innerHTML='';
         modeltxt.innerHTML = `<br>
         <h5>Rajkumar's Blog...</h5>
         <span>Thank you ${user} for your feedback... Have a nice day :)</span>
