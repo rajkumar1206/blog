@@ -85,9 +85,9 @@ form.addEventListener('submit', async (e)=> {
     const resData = await res.json();
 
     console.log(resData);
-    form.name.value=none;
-    form.email.value=none;
-    form.subject.value=none;
-    form.text.value=none;
+    form.name.value="";
+    form.email.value="";
+    form.subject.value="";
+    form.text.value="";
     spinnerHandler.style.display = "none";
 })
