@@ -74,7 +74,7 @@ form.addEventListener('submit', async (e)=> {
     try {
         const obj = {name: form.name.value, email: form.email.value, subject: form.subject.value, text: form.text.value};
         console.log(obj);
-
+        const user = form.name.value;
         const res = await fetch(url+"blog/add/", {
             method: "POST",
             headers: {
@@ -99,6 +99,23 @@ form.addEventListener('submit', async (e)=> {
         labels.forEach(lab => {
             lab.classList.remove('active');
         });
+
+        const modeltxt = document.querySelector('.modal-content');
+        modeltxt.innerHTML = `<br>
+        <h5>Rajkumar's Blog...</h5>
+        <span>Thank you ${user} for your feedback... Have a nice day :)</span>
+        <br>
+        <br>
+        <div class="modal-footer">
+        <a href="#" class="modal-close waves-effect waves-green btn-flat red-text">close</a>
+        </div>
+      </div>`;
+
+        var Modalelem = document.querySelector('.modal');
+        var instance = M.Modal.init(Modalelem);
+        instance.open();
+
+
     } catch(err) {
         alert("Something went wrong...Please try again...");
     }
