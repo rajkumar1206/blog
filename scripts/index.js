@@ -144,7 +144,7 @@ form.addEventListener('submit', async (e)=> {
 
 
 // background image changer 
-const arr = ['../images/pexels-david-besh-884788.jpg', '../images/pexels-lukas.jpg', '../images/pexels-luis-quintero-1624881.jpg', '../images/pexels-no-name-66997.jpg'];
+const arr = ['./pexels-david-besh-884788.jpg', './pexels-lukas.jpg', './pexels-luis-quintero-1624881.jpg', './pexels-no-name-66997.jpg'];
 const im = document.querySelector('.main-image');
 let i=0;
 setInterval(() => {
@@ -158,7 +158,8 @@ const winHeight = window.innerHeight;
 const skill = document.querySelector('.skillset');
 const skillPosition = skill.offsetTop;
 const func = (e) => {
-    const pgy = window.pageYOffset;
+    let pgy = window.pageYOffset;
+    console.log(pgy)
     if(pgy > skillPosition - winHeight/2.5) {
         const lis = document.querySelectorAll('.determinate');
         let j=0;
