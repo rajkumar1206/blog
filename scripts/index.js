@@ -109,10 +109,9 @@ form.addEventListener('submit', async (e)=> {
         <span>Thank you ${user} for your feedback... Have a nice day :)</span>
         <br>
         <br>
-        <div class="modal-footer">
-        <a href="#" class="modal-close waves-effect waves-green btn-flat red-text">close</a>
-        </div>
       </div>`;
+
+      modelfoot.innerHTML = `<a href="#form" class="modal-close waves-effect waves-green btn-flat red-text">close</a>`;
 
         var Modalelem = document.querySelector('.modal');
         var instance = M.Modal.init(Modalelem);

@@ -109,6 +109,26 @@ h2{
 } 
 
 
+/* bacground image */
+.backimg {
+    width: 100%;
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 20px;
+}
+
+.backimg1 {
+    background-image: url('../images/bess-hamiti.jpg');
+}
+
+
+.backimg2 {
+    background-image: url('../images/pexels-david-besh-884788.jpg');
+}
+
 /* spinner */
 .spinner{
     width: 100vw;
