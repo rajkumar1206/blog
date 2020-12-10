@@ -113,6 +113,7 @@ body {
 }
 
 
+
 /* bacground image */
 .backimg {
     width: 100%;
@@ -178,3 +179,41 @@ body {
       transform: rotate(1800deg);
     }
   }
+
+
+
+/* bacground fullscreen edits */
+.light-theme:fullscreen::backdrop {
+    transition: background-color 0.8s ease;
+    background-color: white;
+}
+.dark-theme:fullscreen::backdrop {
+    transition: background-color 0.8s ease;
+    background-color: rgb(36, 35, 35);
+}
+
+
+/* background image transition  */
+.main-image {
+    transition: background-image 0.9s ease;
+}
+
+/* progress bar transition  */
+.progress .determinate {
+    transition: width 1.2s ease-out;
+}
+
+
+/* cards transition  */
+.card {
+    opacity: 0;
+    transition: opacity 2s ease, left 2s ease;
+}
+
+.card:nth-child(even) {
+    left: 100px;
+}
+
+.card:nth-child(odd) {
+    left: -100px;
+}

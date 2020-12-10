@@ -140,4 +140,55 @@ form.addEventListener('submit', async (e)=> {
     }
     
     spinnerHandler.style.display = "none";
+});
+
+
+// background image changer 
+const arr = ['../images/pexels-david-besh-884788.jpg', '../images/pexels-lukas.jpg', '../images/pexels-luis-quintero-1624881.jpg', '../images/pexels-no-name-66997.jpg'];
+const im = document.querySelector('.main-image');
+let i=0;
+setInterval(() => {
+    im.style.backgroundImage = `url(${arr[i]})`;
+    i=(i+1)%4;
+}, 3000);
+
+
+// skills pop overs 
+const winHeight = window.innerHeight;
+const skill = document.querySelector('.skillset');
+const skillPosition = skill.offsetTop;
+const func = (e) => {
+    const pgy = window.pageYOffset;
+    if(pgy > skillPosition - winHeight/2.5) {
+        const lis = document.querySelectorAll('.determinate');
+        let j=0;
+        lis.forEach(el => {
+            if(j===0) el.style.width = '95%';
+            if(j===1 || j===2) el.style.width = '65%';
+            if(j===3) el.style.width = '75%';
+            if(j===4) el.style.width = '60%';
+            if(j===5) el.style.width = '85%';
+            j+=1;
+        });
+        window.removeEventListener('scroll', func, true);
+        
+    }
+}
+window.addEventListener('scroll', func, true);
+
+
+// cards fades stylings tranformations 
+const cardsList = document.querySelectorAll('.card');
+cardsList.forEach(card => {
+    const cardTop = card.offsetTop;
+
+    const funcq = (e) => {
+        const pgy = window.pageYOffset;
+        if(pgy > cardTop - winHeight/2.0) {
+            card.style.opacity=1;
+            card.style.left=0;
+            window.removeEventListener('scroll', funcq, true);
+        }
+    };
+    window.addEventListener('scroll', funcq, true);
 })
