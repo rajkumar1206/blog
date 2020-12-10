@@ -159,7 +159,8 @@ const skill = document.querySelector('.skillset');
 const skillPosition = skill.offsetTop;
 const func = (e) => {
     let pgy = window.pageYOffset;
-    if(pgy > skillPosition - winHeight/2.5) {
+    let y = skill.getBoundingClientRect().y;
+    if(pgy > skillPosition - winHeight/2.5 || y < winHeight/2.5) {
         const lis = document.querySelectorAll('.determinate');
         let j=0;
         lis.forEach(el => {
@@ -181,10 +182,11 @@ window.addEventListener('scroll', func, true);
 const cardsList = document.querySelectorAll('.card');
 cardsList.forEach(card => {
     const cardTop = card.offsetTop;
-
+    
     const funcq = (e) => {
+        let y = card.getBoundingClientRect().y;
         const pgy = window.pageYOffset;
-        if(pgy > cardTop - winHeight/2.0) {
+        if(pgy > cardTop - winHeight/2.0 || y < winHeight/2.0) {
             card.style.opacity=1;
             card.style.left=0;
             window.removeEventListener('scroll', funcq, true);

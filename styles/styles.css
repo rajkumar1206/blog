@@ -5,6 +5,9 @@ body {
 
 .main-image {
     background-image: url('../images/pexels-lukas.jpg');
+    background-image: url('../images/pexels-david-besh-884788.jpg');
+    background-image: url('../images/pexels-luis-quintero-1624881.jpg');
+    background-image: url('../images/pexels-no-name-66997.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -207,7 +210,7 @@ body {
 /* cards transition  */
 .card {
     opacity: 0;
-    transition: opacity 2s ease, left 2s ease;
+    transition: opacity 2s ease, left 1s ease, right 2s ease;
 }
 
 .card:nth-child(even) {
