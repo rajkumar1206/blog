@@ -1,5 +1,3 @@
-document.body.requestFullscreen();
-window.scrollTo(0,1);
 window.addEventListener('DOMContentLoaded', loadjs);
 
 function loadjs () {
