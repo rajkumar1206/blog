@@ -1,3 +1,19 @@
+var goFS = document.getElementById("goFS");
+goFS.addEventListener("click", function() {
+    document.body.requestFullscreen();
+}, false);
+
+
+const el = document.querySelector('#extfullscreen');
+el.addEventListener("click", e => {
+
+        document.exitFullscreen().then(d => {}).catch(e => {
+            document.body.requestFullscreen();
+        });
+
+})
+
+
 window.addEventListener('DOMContentLoaded', loadjs);
 
 function loadjs () {
