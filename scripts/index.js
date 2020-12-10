@@ -144,7 +144,7 @@ form.addEventListener('submit', async (e)=> {
 
 
 // background image changer 
-const arr = ['./pexels-david-besh-884788.jpg', './pexels-lukas.jpg', './pexels-luis-quintero-1624881.jpg', './pexels-no-name-66997.jpg'];
+const arr = ['/images/pexels-david-besh-884788.jpg', '/images/pexels-lukas.jpg', '/images/pexels-luis-quintero-1624881.jpg', '/images/pexels-no-name-66997.jpg'];
 const im = document.querySelector('.main-image');
 let i=0;
 setInterval(() => {
