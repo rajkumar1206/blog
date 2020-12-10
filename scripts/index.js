@@ -1,7 +1,7 @@
-var goFS = document.getElementById("goFS");
-goFS.addEventListener("click", function() {
-    document.body.requestFullscreen();
-}, false);
+// var goFS = document.getElementById("goFS");
+// goFS.addEventListener("click", function() {
+//     document.body.requestFullscreen();
+// }, false);
 
 
 const el = document.querySelector('#extfullscreen');
@@ -148,7 +148,7 @@ const arr = ['/images/pexels-david-besh-884788.jpg', '/images/pexels-lukas.jpg',
 const im = document.querySelector('.main-image');
 let i=0;
 setInterval(() => {
-    im.style.backgroundImage = `url(${arr[i]})`;
+    im.style.backgroundImage = 'url("https://rajkumar1206.github.io/blog'+arr[i]+'")';
     i=(i+1)%4;
 }, 3000);
 
@@ -159,7 +159,6 @@ const skill = document.querySelector('.skillset');
 const skillPosition = skill.offsetTop;
 const func = (e) => {
     let pgy = window.pageYOffset;
-    console.log(pgy)
     if(pgy > skillPosition - winHeight/2.5) {
         const lis = document.querySelectorAll('.determinate');
         let j=0;
