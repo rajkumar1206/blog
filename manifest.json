@@ -8,7 +8,9 @@
         "type": "image/jpg"
       }
     ],
-    "start_url": "/index.html",
-    "display": "fullscreen",
-    "orientation": "portrait"
+    "start_url": "./index.html",
+    "display": "browser",
+    "orientation": "portrait",
+    "background_color": "pink",
+    "theme_color":"orange"
   }
