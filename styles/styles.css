@@ -72,6 +72,9 @@ h2{
     .heading span {
         font-size: 42px;
     }
+    h2 {
+        font-size: 32px;
+    }
 }
 
 .dark-theme {
@@ -264,4 +267,23 @@ body {
 .intro p{
     transition: opacity 1.1s ease;
     opacity: 0;
+}
+
+/* chart  */
+#chartdiv {
+    width: 100%;
+    height: 500px;
+}
+
+.legendcolor {
+    position: relative;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    top: 5px;
+    left: 5px;
+}
+
+.inlinepblock p {
+    display: inline-block;
 }
