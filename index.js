@@ -157,20 +157,23 @@ setInterval(() => {
 const winHeight = window.innerHeight;
 const skill = document.querySelector('.skillset');
 const skillPosition = skill.offsetTop;
-const func = (e) => {
+const func = async (e) => {
     let pgy = window.pageYOffset;
     let y = skill.getBoundingClientRect().y;
     if(pgy > skillPosition - winHeight/2.5 || y < winHeight/2.5) {
         const lis = document.querySelectorAll('.determinate');
         let j=0;
         lis.forEach(el => {
+        });
+        for(const el of lis) {
             if(j===0) el.style.width = '95%';
             if(j===1 || j===2) el.style.width = '65%';
             if(j===3) el.style.width = '75%';
             if(j===4) el.style.width = '60%';
             if(j===5) el.style.width = '85%';
             j+=1;
-        });
+            await timeout(300);
+        }
         window.removeEventListener('scroll', func, true);
         
     }
@@ -183,7 +186,7 @@ const cardsList = document.querySelectorAll('.card');
 let h=0;
 cardsList.forEach(card => {
     h+=1;
-    if(h%2===0) card.style.left='100px';
+    if(h%2===1) card.style.left='100px';
     else card.style.right='100px';
     const cardTop = card.offsetTop;
     
@@ -199,4 +202,37 @@ cardsList.forEach(card => {
     window.addEventListener('scroll', funcq, true);
 });
 
-// cards initial left and right position 
+// intro text fadings 
+function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+const intro = document.querySelector('#devint');
+const funcintro = async (e) => {
+    let y = intro.getBoundingClientRect().y;
+    if(y < winHeight/2.0) {
+        const lt = document.querySelectorAll('.intro p');
+        for(const p of lt) {
+            p.style.opacity=1;
+            await timeout(300);
+        }
+        window.removeEventListener('scroll', funcintro, true);
+    }
+};
+
+
+window.addEventListener('scroll', funcintro, true);
+
+
+// Resume Animation 
+const resume = document.querySelector('.resume');
+const funcresume = async (e) => {
+    let y = resume.getBoundingClientRect().y;
+    if(y < winHeight/2.0) {
+        resume.style.width="100%";
+        resume.style.height="500px";
+        resume.style.opacity=1;
+        window.removeEventListener('scroll', funcresume, true);
+    }
+};
+
+window.addEventListener('scroll', funcresume, true);

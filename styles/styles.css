@@ -225,10 +225,12 @@ body {
 
 /* Resume view  */
 .resume {
-    width: 100%;
-    height: 500px;
+    width: 0%;
+    height: 0px;
+    opacity: 0;
     border: 2px solid black;
     overflow: scroll;
+    transition: all 0.9s ease;
 }
 
 .resume::-webkit-scrollbar {
@@ -257,4 +259,9 @@ body {
 .gd-align .row .col {
     margin-left: 0;
     float: left;
+}
+
+.intro p{
+    transition: opacity 1.1s ease;
+    opacity: 0;
 }
