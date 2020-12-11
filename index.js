@@ -148,7 +148,7 @@ const arr = ['/images/pexels-david-besh-884788.jpg', '/images/pexels-lukas.jpg',
 const im = document.querySelector('.main-image');
 let i=0;
 setInterval(() => {
-    im.style.backgroundImage = 'url("https://rajkumar1206.github.io/blog'+arr[i]+'")';
+    im.style.backgroundImage = 'url(".'+arr[i]+'")';
     i=(i+1)%4;
 }, 3000);
 
@@ -180,7 +180,11 @@ window.addEventListener('scroll', func, true);
 
 // cards fades stylings tranformations 
 const cardsList = document.querySelectorAll('.card');
+let h=0;
 cardsList.forEach(card => {
+    h+=1;
+    if(h%2===0) card.style.left='100px';
+    else card.style.right='100px';
     const cardTop = card.offsetTop;
     
     const funcq = (e) => {
@@ -193,4 +197,6 @@ cardsList.forEach(card => {
         }
     };
     window.addEventListener('scroll', funcq, true);
-})
+});
+
+// cards initial left and right position 
