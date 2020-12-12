@@ -1,9 +1,14 @@
 body {
     margin: 0;
     font-family: sans-serif;
-overflow : "hidden";
+    width: 100%;
+    overflow-x: hidden;
 }
 
+.card {
+    width: 100%;
+    overflow-x: hidden;
+}
 .main-image {
     background-image: url('../images/pexels-lukas.jpg');
     background-image: url('../images/pexels-david-besh-884788.jpg');
