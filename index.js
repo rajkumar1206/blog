@@ -172,7 +172,7 @@ const func = async (e) => {
             if(j===4) el.style.width = '60%';
             if(j===5) el.style.width = '85%';
             j+=1;
-            await timeout(300);
+            await timeout(200);
         }
         window.removeEventListener('scroll', func, true);
         
@@ -192,8 +192,8 @@ cardsList.forEach(card => {
     
     const funcq = (e) => {
         let y = card.getBoundingClientRect().y;
-        const pgy = window.pageYOffset;
-        if(pgy > cardTop - winHeight/2.0 || y < winHeight/2.0) {
+        // const pgy = window.pageYOffset;
+        if( y < winHeight/2.0) {
             card.style.opacity=1;
             card.style.left=0;
             window.removeEventListener('scroll', funcq, true);
