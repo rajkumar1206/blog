@@ -82,6 +82,9 @@ h2{
     h2 {
         font-size: 32px;
     }
+    .padding-row p{
+        font-size: medium;
+    }
 }
 
 .dark-theme {
