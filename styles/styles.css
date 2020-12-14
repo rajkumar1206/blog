@@ -84,6 +84,7 @@ h2{
     }
     .padding-row p{
         font-size: small;
+        text-align: justify;
     }
 }
 
