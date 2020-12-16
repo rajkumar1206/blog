@@ -1,7 +1,8 @@
-user-agent: *
-disallow: /images/
+User-agent: *
+Disallow: /images/
 
-user-agent: *
-allow: /index.html
+User-agent: *
+Allow: /index.html
+Allow: /sitemap_1.xml
 
-sitemap: https://rajkumarr.tech/sitemap.xml
+Sitemap: https://rajkumarr.tech/sitemap_1.xml
