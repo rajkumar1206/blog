@@ -114,7 +114,7 @@ form.addEventListener('submit', async (e)=> {
         form.text.value="";
         const labels = document.querySelectorAll('form label');
         labels.forEach(lab => {
-            lab.classList.remove('active');
+            // lab.classList.remove('active');
         });
 
         const modeltxt = document.querySelector('.modal-content');
