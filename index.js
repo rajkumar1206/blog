@@ -44,7 +44,7 @@ function loadjs () {
 
     const fntyping = async () => {
         const txt1 = document.querySelector('.text-writing-1');
-        const t = "Welcome to Rajkumar Blog. I'm Rajkumar R, Full Stack Web Developer, and created this website with awesome animation and high graphics design. Don't forget to send your reviews, will be waiting for your feedback.";
+        const t = "Welcome to Rajkumar Blog. I'm Rajkumar R, Full Stack Web Developer and created this website with awesome animation and high graphics design. Don't forget to send your review, will be waiting for your feedback.";
         for(let i=0;i<t.length;i++) {
             txt1.innerHTML+=t[i];
             await timeouttype(20);
