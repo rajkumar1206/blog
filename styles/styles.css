@@ -422,8 +422,8 @@ body {
     align-items: center;
     margin: 10px auto;
     z-index: 9999;
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;         /* Turns a square into a circle   */
     background-color: #FF5722;
     transition: all 1s ease;
