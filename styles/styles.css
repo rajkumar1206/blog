@@ -311,6 +311,15 @@ body {
     transition: display 1s ease;
     overflow: hidden;
 }
+#setup {
+    font-family: 'Andika New Basic', sans-serif !important;
+}
+
+#setup h5 {
+     text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #e60073, 0 0 10px #e60073, 0 0 10px #e60073, 0 0 10px #e60073, 0 0 10px #e60073;text-shadow: 0 0 10px #fff, 0 0 10px #ff4da6, 0 0 10px #ff4da6, 0 0 10px #ff4da6, 0 0 10px #ff4da6, 0 0 10px #ff4da6, 0 0 10px #ff4da6;
+    font-weight: bold;
+    font-family: 'Niconne', cursive;
+}
 
 #setup h5 {
     margin: 80px;

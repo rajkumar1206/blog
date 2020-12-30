@@ -36,8 +36,8 @@ function loadjs () {
         }
         await timeouttype(300);
         
-        document.querySelector('.bounce-ball .box').style.height='300vh';
-        document.querySelector('.bounce-ball .box').style.width='300vh';
+        document.querySelector('.bounce-ball .box').style.height='600vh';
+        document.querySelector('.bounce-ball .box').style.width='600vh';
         await timeouttype(1000);
         document.querySelector('#setup').style.display='none';
     }
