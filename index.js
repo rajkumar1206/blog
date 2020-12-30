@@ -29,7 +29,7 @@ function loadjs () {
     const fntype2 = async () => {
         const txt1 = document.querySelector('.text-writing-2');
         document.querySelector('.text-writing-1').innerHTML='';
-        const t = "For better expierence view in Full Screen mode, you can enter full screen mode by clicking \"Rajklumar's Blog\" title which you will be seeing soon.";
+        const t = "For better expierence view in Full Screen mode, you can enter full screen mode by clicking \"Rajkumar's Blog\" title which you will be seeing soon.";
         for(let i=0;i<t.length;i++) {
             txt1.innerHTML+=t[i];
             await timeouttype(20);
