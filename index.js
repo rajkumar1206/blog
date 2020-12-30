@@ -34,7 +34,7 @@ function loadjs () {
             txt1.innerHTML+=t[i];
             await timeouttype(20);
         }
-        await timeouttype(300);
+        await timeouttype(1000);
         
         document.querySelector('.bounce-ball .box').style.height='600vh';
         document.querySelector('.bounce-ball .box').style.width='600vh';
