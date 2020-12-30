@@ -17,6 +17,57 @@ el.addEventListener("click", e => {
 window.addEventListener('DOMContentLoaded', loadjs);
 
 function loadjs () {
+    const firstAnime = document.querySelector('.blue-anime');
+    const firstAnime2 = document.querySelector('.purple-anime');
+    firstAnime2.classList.add('go-right');
+    firstAnime.classList.add('go-left');
+
+    function timeouttype(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    const fntype2 = async () => {
+        const txt1 = document.querySelector('.text-writing-2');
+        document.querySelector('.text-writing-1').innerHTML='';
+        const t = "For better expierence view in Full Screen mode, you can enter full screen mode by clicking \"Rajklumar's Blog\" title which you will be seeing soon.";
+        for(let i=0;i<t.length;i++) {
+            txt1.innerHTML+=t[i];
+            await timeouttype(20);
+        }
+        await timeouttype(300);
+        
+        document.querySelector('.bounce-ball .box').style.height='300vh';
+        document.querySelector('.bounce-ball .box').style.width='300vh';
+        await timeouttype(1000);
+        document.querySelector('#setup').style.display='none';
+    }
+
+    const fntyping = async () => {
+        const txt1 = document.querySelector('.text-writing-1');
+        const t = "Welcome to Rajkumar Blog. I'm Rajkumar R, Full Stack Web Developer, and created this website with awesome animation and high graphics design. Don't forget to send your reviews, will be waiting for your feedback.";
+        for(let i=0;i<t.length;i++) {
+            txt1.innerHTML+=t[i];
+            await timeouttype(20);
+        }
+        await timeouttype(1000);
+        fntype2();
+    }
+
+    const fnnext = () => {
+        const frst = document.querySelector('.first-anime');
+        const scd = document.querySelector('.second-anime');
+        scd.classList.add('second-anime-open');
+        frst.classList.add('first-anime-close');
+        setTimeout(fntyping, 1000);
+    }
+
+    const fn = () => {
+        firstAnime.style.color='white';
+        firstAnime2.style.color='white';
+        setTimeout(fnnext, 2000);
+    }
+    setTimeout(fn, 500);
+
     
     const switchTheme = document.querySelector('input[type=checkbox]');
     const body = document.querySelector('body');
