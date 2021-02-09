@@ -5,6 +5,27 @@ body {
     overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, blue, purple); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(11, 177, 233); 
+  }
+
 .card {
     width: 100%;
     overflow-x: hidden;
