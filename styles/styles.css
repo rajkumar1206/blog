@@ -31,10 +31,10 @@ body {
     overflow-x: hidden;
 }
 .main-image {
-    background-image: url('../images/pexels-lukas.jpg');
-    background-image: url('../images/pexels-david-besh-884788.jpg');
+    background-image: url('../images/bg.jpg');
+    /* background-image: url('../images/pexels-david-besh-884788.jpg');
     background-image: url('../images/pexels-luis-quintero-1624881.jpg');
-    background-image: url('../images/pexels-no-name-66997.jpg');
+    background-image: url('../images/pexels-no-name-66997.jpg'); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -322,6 +322,7 @@ body {
 
 
 #setup {
+    /* display: none; */
     position: fixed;
     z-index: 9999;
     width: 100vw;

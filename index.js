@@ -195,14 +195,21 @@ form.addEventListener('submit', async (e)=> {
 
 
 // background image changer 
-const arr = ['/images/pexels-david-besh-884788.jpg', '/images/pexels-lukas.jpg', '/images/pexels-luis-quintero-1624881.jpg', '/images/pexels-no-name-66997.jpg'];
+// const arr = ['/images/pexels-david-besh-884788.jpg', '/images/pexels-lukas.jpg', '/images/pexels-luis-quintero-1624881.jpg', '/images/pexels-no-name-66997.jpg'];
+const arr = ['/images/svg/001-forrst.svg', '/images/svg/002-myspace.svg'];
 const im = document.querySelector('.main-image');
 let i=0;
-setInterval(() => {
-    im.style.backgroundImage = 'url(".'+arr[i]+'")';
-    i=(i+1)%4;
-}, 3000);
+// setInterval(() => {
+//     im.style.backgroundImage = 'url(".'+arr[i]+'")';
+//     i=(i+1)%4;
+// }, 3000);
 
+// skip loading
+const skipbtn = document.querySelector('#skip-btn');
+skipbtn.addEventListener('click', () => {
+    const setup = document.querySelector('#setup');
+    setup.style.display = 'none';
+})
 
 // skills pop overs 
 const winHeight = window.innerHeight;
