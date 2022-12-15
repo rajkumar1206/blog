@@ -127,23 +127,23 @@ const spinnerHandler = document.querySelector(".spinner");
 const sendName = document.querySelector('.sendName');
 
 sendName.addEventListener('click', async (e) => {
-    e.preventDefault();
-    spinnerHandler.style.display = "block";
-    const name = document.querySelector('.sendNameForm');
-    console.log(name.value);
+    // e.preventDefault();
+    // spinnerHandler.style.display = "block";
+    // const name = document.querySelector('.sendNameForm');
+    // console.log(name.value);
 
-    const res = await fetch(url+"blog/visit/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-          }, 
-        body: JSON.stringify({name: name.value})
-    });
+    // const res = await fetch(url+"blog/visit/", {
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type": "application/json"
+    //       }, 
+    //     body: JSON.stringify({name: name.value})
+    // });
 
-    const resData = await res.json();
+    // const resData = await res.json();
 
-    console.log(resData);
-    name.value="";
+    // console.log(resData);
+    // name.value="";
     spinnerHandler.style.display = "none";
 
 });
