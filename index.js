@@ -3,6 +3,21 @@
 //     document.body.requestFullscreen();
 // }, false);
 
+const str = window.innerWidth;
+console.log(typeof str);
+if(str >= 0){
+    const parallax = document.querySelector('.main-image');
+    const parallaxHeading = document.querySelector('.parallexText');
+
+    parallax.style.backgroundPositionY = '0px';
+    parallaxHeading.style.top = '0px';
+
+    window.addEventListener('scroll',() => {
+        let offset = window.pageYOffset;
+        parallax.style.backgroundPositionY = offset*0.5 +'px';
+        parallaxHeading.style.top = offset*0.35 +'px';
+    });
+}
 
 const el = document.querySelector('#extfullscreen');
 el.addEventListener("click", e => {
