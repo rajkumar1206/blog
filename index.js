@@ -151,11 +151,15 @@ sendName.addEventListener('click', async (e) => {
 const form = document.querySelector('form');
 form.addEventListener('submit', async (e)=> {
     e.preventDefault();
-    spinnerHandler.style.display = "block";
+//    spinnerHandler.style.display = "block";
 
     try {
         const obj = {name: form.name.value, email: form.email.value, subject: form.subject.value, text: form.text.value};
         console.log(obj);
+
+        window.open(`mailto:raj612r@gmail.com?subject=${'[Rajkumar-Blog]: ' + form.subject.value}&body=${encodeURIComponent('Hi, I am ' + form.name.value + '\n\n' + form.text.value + '\n\nRegards,\n' + form.name.value)}`);
+
+        return;
         const user = form.name.value;
         const res = await fetch(url+"blog/add/", {
             method: "POST",
