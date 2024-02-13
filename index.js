@@ -157,8 +157,12 @@ form.addEventListener('submit', async (e)=> {
         const obj = {name: form.name.value, email: form.email.value, subject: form.subject.value, text: form.text.value};
         console.log(obj);
 
-        window.open(`mailto:raj612r@gmail.com?subject=${'[Rajkumar-Blog]: ' + form.subject.value}&body=${encodeURIComponent('Hi, I am ' + form.name.value + '\n\n' + form.text.value + '\n\nRegards,\n' + form.name.value)}`);
+        window.open(`mailto:raj612r@gmail.com?subject=${'[Rajkumar-Blog]: ' + form.subject.value}&body=${encodeURIComponent('Hi Rajkumar, I am ' + form.name.value + '\n\n' + form.text.value + '\n\nRegards,\n' + form.name.value)}`);
 
+        form.name.value="";
+        form.email.value="";
+        form.subject.value="";
+        form.text.value="";
         return;
         const user = form.name.value;
         const res = await fetch(url+"blog/add/", {
