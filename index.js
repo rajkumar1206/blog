@@ -368,3 +368,18 @@ const callChartFunction = () => {
 
 }
 window.addEventListener('scroll', funcChat, true);
+
+// Blog page link
+let blogLink = '';
+const blogElement = document.getElementById('blog-link');
+
+fetch('https://raw.githubusercontent.com/rajkumar1206/blog-data/main/urls.json')
+    .then((res) => res.json())
+    .then((resData) => {
+        console.log(resData["blog-posts"]);
+        blogLink = resData["blog-posts"];
+    })
+
+blogElement.addEventListener('click', () => {
+    window.open(blogLink);
+});
