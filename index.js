@@ -247,11 +247,11 @@ const func = async (e) => {
         lis.forEach(el => {
         });
         for(const el of lis) {
-            if(j===0) el.style.width = '95%';
-            if(j===1 || j===2) el.style.width = '65%';
+            if(j===0) el.style.width = '90%';
+            if(j===1 || j===2) el.style.width = '90%';
             if(j===3) el.style.width = '75%';
-            if(j===4) el.style.width = '60%';
-            if(j===5) el.style.width = '85%';
+            if(j===4) el.style.width = '85%';
+            if(j===5) el.style.width = '70%';
             j+=1;
             await timeout(200);
         }
